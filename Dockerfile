@@ -7,3 +7,5 @@ RUN go get app
 RUN go install app
 
 RUN /go/bin/app
+
+ENTRYPOINT ["/go/bin/app"]
