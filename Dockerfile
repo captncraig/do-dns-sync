@@ -1,7 +1,8 @@
 FROM golang:1.9.1-alpine
 
-ADD . /go/src/app
+RUN apk add --no-cache curl git
 
+ADD . /go/src/app
 RUN go get app
 RUN go install app
 
